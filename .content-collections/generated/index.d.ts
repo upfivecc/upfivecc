@@ -7,5 +7,4 @@ export declare const allBlogs: Array<Blog>;
 export type Course = GetTypeByName<typeof configuration, "courses">;
 export declare const allCourses: Array<Course>;
 
-
 export {};
