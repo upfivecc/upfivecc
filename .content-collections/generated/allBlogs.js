@@ -165,5 +165,47 @@ export default [
       "path": "intro"
     },
     "slug": "intro"
+  },
+  {
+    "content": "1. 大模型介绍\r\n\r\nAI模型是旨在处理和生成信息的算法，通常模仿人类的认知功能。通过从大兴数据集中学习模式和见解，这些模型可以做出预测、文本、图像和其他形式输出，从而增强各个行业的各种应用。\r\n\r\nSpring AI 是一个面向人工智能工程的应用框架，解决了 AI 集成的基本挑战：将企业数据和 API 与 AI 大模型连接起来。\r\n\r\n![alt text](image-1.png)\r\n\r\n2. 模型的分类：\r\n![alt text](image-2.png)\r\n\r\nAI模型根据数据类型，大致可以分为很多种，每种都适用于特定的用例。SpringAI目前支持：语言、图像和音频形式处理输入和输出的模型。\r\n\r\nEmbedding Model 通常接受文本作为输入并输出数字，通常称为嵌入文本（Embedding Text），用来表示AI模型中使用的内部数据结构。SpringAI提供了对Embedding的支持以支持开发更高级的应用场景。\r\n\r\n\r\n3. SpringAI 核心概念\r\n\r\n3.1 Prompt 提示词\r\nPrompt作为语言基础输入的基础，知道AI模型生成特定的输出。\r\nChatGPT的API包含多个文本输入，每个文本输入都有其角色。\r\n系统角色：用于告知模型如何行为并设定交互的背景。\r\n用户角色：通常是来自用户的输入。\r\n3.2 Prompt Template 提示词模版\r\n创建有效的Prompt设计建立请求的上下文，并用用户输入的特定值替换请求的部分内容。这个过程使用传统的基于文本的模版引擎来进行Prompt的创建和管理。SpringAI采用开源库StringTemplate来实现这一目的。\r\n3.3 Embedding 嵌入\r\n嵌入（Embedding）是文本、图像或视频的数值表示，能够捕捉输入之间的关系，Embedding通过将文本、图像和视频转换为称为向量(Vector)的浮点数数组来工作。这些向量旨在捕捉文本、图像和音视频的含义，Embedding数组的长度称为向量的维度。\r\n\r\n通过计算两个文本片段的向量表示之间的数值举例，应用程序可以确定用于生成嵌入向量的对象之间的相似性。\r\n\r\n![alt text](image-3.png)\r\n\r\n3.4 Token\r\ntoken是AI模型工作原理的基石。输入时，模型将单词转换为 token。输出时，将token转换成单词。\r\n在英语中，一个token大约对应一个单词的75%。\r\n在托管AI模型的背景下，费用由使用的token数量决定，输入和输出都会影响总token数量。\r\n模型还受到token限制，这会限制单个API调用中处理的文本量。此阈值通常称为“上下文窗口”。模型不会处理超出此限制的任何文本。\r\n\r\n![alt text](image-4.png)\r\n\r\n\r\n3.5 Structured Output 结构化输出\r\n设计创建Prompt以产生预期的输出，然后将生成的简单字符串转换为可用于应用程序集成的数据结构。\r\n![alt text](image-5.png)\r\n\r\n3.6 将专有数据和API引入模型\r\n![alt text](image-6.png)\r\n3.6.1 Fine Tuning 微调\r\n定制模型并修改模型内部权重，将内部数据和API引入模型\r\n\r\n3.6.2 Prompt Stuffing 提示词填充\r\n\r\n将数据嵌入到提供给模型的提示词中，将内部数据和API引入模型\r\n\r\n3.7 RAG 检索增强生成\r\n旨在解决为AI模型提供额外的知识输入，以辅助模型更好的回答问题。\r\n先对数据进行 ETL处理（extract、transformer、load），入向量库、LLM处理\r\n![alt text](image-7.png)\r\n\r\n3.8 Function Calling 函数调用\r\n大模型语言模型，是基于已有数据训练的，这就导致无法感知实时数据。\r\n\r\nFunction Calling解决了这个问题，它允许我们注册自己的函数，将LLM链接到外部系统的API，这些系统可以为LLM提供实时数据并代表他们执行数据处理操作。\r\n\r\n![alt text](image-8.png)\r\n\r\n步骤解释：\r\n- （1）执行聊天请求并发送函数定义信息。后者提供name（description例如，解释模型何时应调用该函数）和input parameters（例如，函数的输入参数模式）。\r\n- （2）当模型决定调用该函数时，它将使用输入参数调用该函数，并将输出返回给模型。\r\n- （3）Spring AI 为您处理此对话。它将函数调用分派给适当的函数，并将结果返回给模型。\r\n- （4）模型可以执行多个函数调用来检索所需的所有信息。\r\n- （5）一旦获取了所有需要的信息，模型就会生成响应。\r\n\r\n3.9 Evaluation 评估人工智能的回答\r\n有效评估人工智能系统回答的正确性，对于确保最终应用程序的准确性和实用性非常重要。 Evaluation 评估过程设计分析响应是否符合用户的意图，与查询的上下文强相关，一些指标如相关性、连贯性和事实正确性等都被用于衡量AI生成的响应的质量。",
+    "title": "SpringAI入门教程-介绍",
+    "date": "2025-07-01T21:10:00+08:00",
+    "updated": "2025-07-01T21:10:00+08:00",
+    "featured": true,
+    "summary": "SpringAI入门教程",
+    "keywords": [
+      "SpringAI入门教程",
+      "大模型",
+      "Spring AI"
+    ],
+    "_meta": {
+      "filePath": "spring-ai-course1.md",
+      "fileName": "spring-ai-course1.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "spring-ai-course1"
+    },
+    "slug": "spring-ai-course1"
+  },
+  {
+    "content": "1. 可插拔的接口\r\n支持不同大模型厂商的 API接口，支持同步和流式 API，也支持访问模型特定的功能\r\n2. 通用特性\r\n市面上主流的大模型厂商都提供的通用能力：\r\n2.1 提示词\r\n\r\n2.2 向量模型（Embedding Models）\r\n向量模型的本质目标，就是把语义相似的内容用“相近”的向量表示，把“不相关”内容尽量拉远。所以好的向量模型能够更好的识别语义，进行向量化。\r\n2.3 文转图\r\n\r\n2.4 语音转文字\r\n\r\n2.5 文字转语音\r\n\r\n2.6 内容审核\r\nModeration Models 专门用于内容审核、风险检测和安全控制，判断文本、图片、音频等内容是否符合规定标准或安全规范的模型。\r\n3. 结构化输出\r\n可将大模型的输出转换成 POJO 对象，供业务使用\r\n\r\n4. 支持所有主流的向量数据库\r\n对于向量模型生成出来的向量，需要持久化到向量数据库，并且能利用向量数据库来计算两个向量之间的相似度，或者根据一个向量查找跟这个向量最相似的向量。\r\n\r\n可插拔的跨厂商的向量数据库操作 API，包括类 SQL 的操作接口\r\n\r\n5. 支持多模式的API\r\n支持同时处理文本、音频或视频等数据。\r\n6. Tools 调用\r\nFunction Calling，允许模型跟外部API，工具交互，增强模型的能力。\r\n\r\n7. 模型审查\r\n评估大模型生成的内容，减少模型生成的幻觉\r\n\r\n8. 可观测性\r\nSpringAI对核心组件提供各种指标，追踪能力，有各种拦截器实现。\r\n\r\n9. 数据工程中的文档抽取 ETL 框架\r\nExtract、Transform、Load 流水线架构处理数据，供大模型 RAG 使用。\r\n\r\n10. 基于 SpringBoot 的大模型服务以及向量存储服务的自动注解\r\n\r\n11. 聊天对话客户端API\r\n与大模型聊天的 fluent API，在用法上类似于 WebClient 和 RestClient API。\r\n\r\n12. Advisors （AOP） 支持\r\n对访问大模型，以及大模型的响应做切面处理\r\n\r\n13. 对话记录存储\r\nChatMemory支持\r\n14. RAG 支持",
+    "title": "SpringAI入门教程-特性",
+    "date": "2025-07-01T21:10:00+08:00",
+    "updated": "2025-07-01T21:10:00+08:00",
+    "featured": true,
+    "summary": "SpringAI入门教程",
+    "keywords": [
+      "SpringAI入门教程",
+      "大模型",
+      "Spring AI"
+    ],
+    "_meta": {
+      "filePath": "spring-ai-course2.md",
+      "fileName": "spring-ai-course2.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "spring-ai-course2"
+    },
+    "slug": "spring-ai-course2"
   }
 ]
