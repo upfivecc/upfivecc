@@ -15,21 +15,15 @@
   </div>
 </div>
 
+<hr/>
 
 
 <p align="center">
     <a href="https://www.rust-lang.org/"> <img src="https://img.shields.io/badge/rust-d07f4f.svg?&style=for-the-badge&logo=rust&logoColor=white"/> </a>
     <a href="https://golang.org/"> <img src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white"/> </a>
-    <a href="https://spring.io/"> <img src="https://img.shields.io/badge/spring-framework-orange?logo=spring"/> </a>
+    <a href="https://spring.io/"> <img src="https://img.shields.io/badge/Spring-2357A143?style=for-the-badge&logo=SPRING&logoColor=white"/> </a>
     <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /> </a>
-    <a href="https://nextjs.org/"> <img src="https://img.shields.io/badge/nextjs-green?logo=nextjs"/> </a>
-</p>
-
-<p align="center">
-    <a href="https://neovim.io/"> <img src="https://img.shields.io/badge/neovim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"/> </a>
-    <a href="https://www.archlinux.org/"> <img src="https://img.shields.io/badge/arch-%231793d1.svg?&style=for-the-badge&logo=arch-linux&logoColor=white"/> </a>
-    <a href=""> <img src="https://img.shields.io/badge/win10-%23008080.svg?&style=for-the-badge&logo=windows&logoColor=white"/> </a>
-    <a href="https://github.com/Microsoft/Terminal/"> <img src="https://img.shields.io/badge/wt-%234d4d4d.svg?&style=for-the-badge&logo=windows-terminal&logoColor=white"/> </a>
+    <a href="https://nextjs.org/"> <img src="https://img.shields.io/badge/nextjs-23008080?style=for-the-badge&logo=NEXTJS&logoColor=white"/> </a>
 </p>
 
 
