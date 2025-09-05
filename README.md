@@ -9,7 +9,7 @@
   <!-- profile logo 个人资料徽标 -->
   <div>
     <a href="https://juejin.cn/user/4065350953211632/posts"><img src="https://img.shields.io/badge/Website-博客-8c36db" /></a>&emsp;
-    <a href="https://smms.app/image/udNiaT7wK61QtjY"><img src="https://img.shields.io/badge/WeChat-微信-07c160" /></a>&emsp;
+    <a href="https://ps.ssl.qhimg.com/t02b9c1ee9104934135.jpg"><img src="https://img.shields.io/badge/WeChat-微信-07c160" /></a>&emsp;
     <!-- visitor -->
     <img src="https://komarev.com/ghpvc/?username=upfivecc&label=Views&color=orange&style=flat" alt="访问量统计" />&emsp;
   </div>
@@ -24,13 +24,29 @@
 
 💗 Love and peace
 
+<p align="center">
+    <a href="https://www.rust-lang.org/"> <img src="https://img.shields.io/badge/rust-d07f4f.svg?&style=for-the-badge&logo=rust&logoColor=white"/> </a>
+    <a href="https://golang.org/"> <img src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white"/> </a>
+    <a href="https://elixir-lang.org/"> <img src="https://img.shields.io/badge/elixir-9a3ea8?style=for-the-badge&logo=elixir&logoColor=white"/> </a>
+<!--     <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /> </a> -->
+<!--     <a href="https://www.lua.org/"> <img src="https://img.shields.io/badge/lua-2C2D72.svg?&style=for-the-badge&logo=lua&logoColor=white"/> </a> -->
+<!--     <a href="https://www.typescriptlang.org/"> <img src="https://img.shields.io/badge/typescript-007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/> </a> -->
+<!--     <a href="https://www.haskell.org/">  <img src="https://img.shields.io/badge/haskell-5D4F85?style=for-the-badge&logo=haskell&logoColor=white" alt="Haskell" /> </a> -->
+    <a href="https://crystal-lang.org/"> <img src="https://img.shields.io/badge/crystal-000000?style=for-the-badge&logo=crystal&logoColor=white"/> </a>
+<!--     <a href="https://www.ruby-lang.org/"> <img src="https://img.shields.io/badge/ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby" /> </a> -->
+</p>
+
+<p align="center">
+    <a href="https://neovim.io/"> <img src="https://img.shields.io/badge/neovim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"/> </a>
+    <a href="https://www.archlinux.org/"> <img src="https://img.shields.io/badge/arch-%231793d1.svg?&style=for-the-badge&logo=arch-linux&logoColor=white"/> </a>
+    <a href=""> <img src="https://img.shields.io/badge/win10-%23008080.svg?&style=for-the-badge&logo=windows&logoColor=white"/> </a>
+    <a href="https://github.com/Microsoft/Terminal/"> <img src="https://img.shields.io/badge/wt-%234d4d4d.svg?&style=for-the-badge&logo=windows-terminal&logoColor=white"/> </a>
+</p>
+
 ### Blog Posts
 
-- [一文讲透可升级合约，并通过hardhat+openzeppelin开发生产环境可升级合约](https://juejin.cn/post/7357988193340653609)
-- [花式发币法之发行各类 ERC20 代币](https://juejin.cn/post/7324224402304057396)
-- [Web3 应用调用 IPFS 服务实现文件去中心化存储](https://juejin.cn/post/7322355350921740328)
-- [在 Solidity 智能合约中调用 Chainlink 预言机获取外部数据及生成随机数](https://juejin.cn/post/7321964344396513280)
-- [Web3 开发智能合约部署及合约验证全流程](https://juejin.cn/post/7312342529664221210)
+- [Spring AI 特性](https://juejin.cn/post/7540683686410403879)
+- [Spring AI 介绍](https://juejin.cn/post/7540184817917378601)
 
 ### Languages and Tools
 
