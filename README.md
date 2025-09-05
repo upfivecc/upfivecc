@@ -16,13 +16,6 @@
 
 </div>
 
-### About me
-
-😃 嗨，你好，我是UpFive，一位Web3领域的前端开发 and 全栈开发
-
-🎨 热爱编程、Web3、跑步、生活
-
-💗 Love and peace
 
 <p align="center">
     <a href="https://www.rust-lang.org/"> <img src="https://img.shields.io/badge/rust-d07f4f.svg?&style=for-the-badge&logo=rust&logoColor=white"/> </a>
@@ -42,6 +35,15 @@
     <a href=""> <img src="https://img.shields.io/badge/win10-%23008080.svg?&style=for-the-badge&logo=windows&logoColor=white"/> </a>
     <a href="https://github.com/Microsoft/Terminal/"> <img src="https://img.shields.io/badge/wt-%234d4d4d.svg?&style=for-the-badge&logo=windows-terminal&logoColor=white"/> </a>
 </p>
+
+
+### About me
+
+😃 嗨，你好，我是UpFive，一位Web3领域的前端开发 and 全栈开发
+
+🎨 热爱编程、Web3、跑步、生活
+
+💗 Love and peace
 
 ### Blog Posts
 
