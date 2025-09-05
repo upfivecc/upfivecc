@@ -1,3 +1,3 @@
 
 
-https://visiky.github.io/resume/?template=template2&user=fiveupup
+https://visiky.github.io/resume/?template=template2&user=upfivecc

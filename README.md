@@ -1,227 +1,368 @@
-# [中文文档](README.zh.md)
+<div align="center">
 
-<h1 align=center>Nextjs Blog Template | Ladder Theme | <a href="https://guangzhengli.com">Blog</a></h1>
-
-This repository is a Next.js implementation of the [hugo-ladder-theme](https://github.com/guangzhengli/hugo-theme-ladder).
-
-This is a Next.js blog template, and here's an introduction to the basic usage of this template.
-
-## How to develop locally?
-
-```bash
-npm install
+  <!-- dynamic typing effect 动态打字效果 -->
+  
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=console.log(%22Hello%2C%20World%22);小孙同学祝您今天愉快!&center=true&size=27)](https://git.io/typing-svg)
 
 
-npm run dev
+  <!-- knock code pictures 敲代码的图片 -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/coding.gif" />
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/developer.svg" height="225px" />
+    <img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/coding.gif" />
+  </picture>
+
+  <!-- for beauty 留个空行好看点 -->
+  <div>&nbsp;</div>
+
+  <!-- profile logo 个人资料徽标 -->
+  <div>
+    <a href="https://twitter.com/sun0225SUN/"><img src="https://img.shields.io/badge/Twitter-推特-blue" /></a>&emsp;
+    <a href="https://www.youtube.com/@sun0225SUN"><img src="https://img.shields.io/badge/YouTube-油管-c32136" /></a>&emsp;
+    <a href="https://sunguoqi.com/"><img src="https://img.shields.io/badge/Website-博客-8c36db" /></a>&emsp;
+    <a href="https://wechat.guoqi.dev"><img src="https://img.shields.io/badge/WeChat-微信-07c160" /></a>&emsp;
+    <a href="https://space.bilibili.com/448488855/"><img src="https://img.shields.io/badge/Bilibili-B站-ff69b4" /></a>&emsp;
+    <!-- visitor -->
+    <img src="https://komarev.com/ghpvc/?username=sun0225SUN&label=Views&color=orange&style=flat" alt="访问量统计" />&emsp;
+    <!-- wakatime -->    
+    <a href="https://wakatime.com/@sun0225SUN"><img src="https://wakatime.com/badge/user/42d0678c-368b-448b-9a77-5d21c5b55352.svg" /></a>
+
+  </div>
+
+  <!-- Snake Code Contribution Map 贪吃蛇代码贡献图 -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-snake-contrib/github-contribution-grid-snake.svg" />
+    <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+  </picture>
+
+</div>
+
+#  🙋 Hello
+
+<table>
+  
+<tr><td>
+
+### 🤺 About Me
+
+<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/jobs.png" />
+
+<p>&emsp;&emsp;嗨，你好，我是小孙同学。热爱编程、摄影、读书、旅行。</p>
+<p>&emsp;&emsp;热爱计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。</p>
+<p>&emsp;&emsp;我们正在让这个世界变得更加美好，通过代码的重复使用和延展构建完美体系。</p>
+<p>&emsp;&emsp;<strong>We're making the world a better place. Through constructing elegant hierarchies for maximum code reuse and extensibility.</strong></p>
+
+</td></tr>
+
+<tr><td>
+
+### 🏢 Work Experience
+
+<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/yuanze.png" />
+
+- [北京原则科技有限公司](https://lusun.com/) &emsp; 📌 2024-03-04 —— 2024-08-28
+
+  - 工作岗位：软件研发工程师
+  - 工作内容：软件开发与维护
+
+<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/tuhui.png" />
+
+- [广州图慧信息科技有限公司](https://www.tuhuimap.com/) &emsp; 📌 2023-06-19 —— 2024-01-19
+
+  - 工作岗位：Web 前端开发工程师
+  - 工作内容：一些杂活
+
+<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/nio.png" />
+
+- [蔚来汽车科技（安徽）有限公司](https://www.nio.cn/) &emsp; 📌 2023-02-20 —— 2023-05-12
+
+  - 工作岗位：Web 前端开发实习生
+  - 工作内容：参与一站式数据治理与研发平台 DataSight 的开发与维护工作
+
+</td></tr>
+
+<tr><td>
+
+### 📃 Recent Blog
+
+<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/astronaut.png" />
+
+<!-- feed start -->
+- Mar 18 - [昆仑巢「疯狂星期六」，没有人是一座孤岛～](https://guoqi.dev/posts/kunlunchao/)
+- Mar 10 - [你好，北京！你好，原则科技！一切都是最好的安排！](https://guoqi.dev/posts/yuanze/)
+- Feb 20 - [行则将至，未来可期，和 2023 好好说声再见吧！](https://guoqi.dev/posts/2023/)
+- Feb 16 - [西藏之旅｜青春没有售价，火车直达拉萨！](https://guoqi.dev/posts/xizang/)
+- Jan 03 - [珠海之旅｜去感受风，去聆听海，去触摸，去抵达](https://guoqi.dev/posts/zhuhai/)
+<!-- feed end -->
+
+</td></tr>
+
+<tr><td>
+
+### 📊 WakaTime
+
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api/wakatime?username=sun0225SUN&layout=compact&text_color=f0f6fc&bg_color=00000000&hide_border=true&hide_title=true"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api/wakatime?username=sun0225SUN&layout=compact&text_color=1f2328&bg_color=00000000&hide_border=true&hide_title=true"
+    media="(prefers-color-scheme: light)"
+  />
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=sun0225SUN&layout=compact&text_color=f0f6fc&bg_color=00000000&hide_border=true&hide_title=true" />
+</picture>
+
+</td></tr>
+
+<tr><td>
+
+<!--START_SECTION:waka-->
+**I'm an Early 🐤** 
+
+```text
+🌞 Morning                679 commits         ███████░░░░░░░░░░░░░░░░░░   26.86 % 
+🌆 Daytime                801 commits         ████████░░░░░░░░░░░░░░░░░   31.69 % 
+🌃 Evening                594 commits         ██████░░░░░░░░░░░░░░░░░░░   23.50 % 
+🌙 Night                  454 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.96 % 
 ```
+📅 **I'm Most Productive on Friday** 
 
-## How to deploy
-
-Clone or fork locally, modify the configuration as described below, then select this repository for deployment on [Vercel](https://vercel.com).
-
-All deployment configurations can use the default settings, no special configuration is needed.
-
-If you need to use edge or fluid compute, please modify the code or vercel configuration yourself.
-
-# Blog Configuration
-
-## 1. How to write blogs
-
-Blog files in this repository need to be placed in the `src/content/blog` directory, they can be markdown files or mdx files.
-
-The following metadata needs to be configured according to your needs:
-
-- `title`: Blog title
-- `date`: Blog publication date
-- `updated`: Blog update date
-- `keywords`: Blog keywords for SEO optimization
-- `featured`: Whether to display on the homepage
-- `summary`: Blog summary
-
-## 2. Blog Configuration
-
-All blog configurations are centralized in the `src/lib/config.ts` file, which has the following advantages:
-
-1. Centralized management: All configurations are in one file, making it easy to maintain and modify
-2. Type safety: Using TypeScript provides type checking and auto-completion
-3. Reusability: Avoids duplicate configurations scattered across different files
-4. Consistency: Ensures the same configuration values are used everywhere
-
-### 2.1 Site Basic Configuration
-
-```typescript
-site: {
-  title: "Your blog title",
-  name: "Your blog name",
-  description: "Blog description",
-  keywords: ["keyword1", "keyword2"],
-  url: "https://yourdomain.com",
-  baseUrl: "https://yourdomain.com",
-  image: "https://yourdomain.com/og-image.png",
-  favicon: {
-    ico: "/favicon.ico",
-    png: "/favicon.png",
-    svg: "/favicon.svg",
-    appleTouchIcon: "/favicon.png",
-  },
-  manifest: "/site.webmanifest",
-}
-```
-
-These configurations are used for:
-- Basic website information display
-- SEO optimization
-- Browser tab icons
-- Social media share previews
-
-### 2.2 Author Information Configuration
-
-```typescript
-author: {
-  name: "Your name",
-  email: "Your email",
-  bio: "Personal bio",
-}
-```
-
-Author information is used for:
-- Homepage display
-- RSS feed information
-- Author information in blog posts
-
-### 2.3 Social Media Configuration
-
-```typescript
-social: {
-  github: "https://github.com/yourusername",
-  x: "https://x.com/yourusername",
-  xiaohongshu: "https://www.xiaohongshu.com/user/profile/yourID",
-  wechat: "Your WeChat QR code image link",
-  buyMeACoffee: "https://www.buymeacoffee.com/yourusername",
-}
-```
-
-These links will be displayed in:
-- Social media links area on the homepage
-- Social media icons in the navigation bar
-
-### 2.4 Comment System Configuration
-
-```typescript
-giscus: {
-  repo: "Your GitHub repository name",
-  repoId: "Repository ID",
-  categoryId: "Category ID",
-}
-```
-
-Using Giscus as the comment system requires:
-1. Install the Giscus app on GitHub
-2. Enable Discussions in your repository
-3. Get the configuration information and fill it in here
-
-### 2.5 Navigation Menu Configuration
-
-```typescript
-navigation: {
-  main: [
-    { 
-      title: "Articles", 
-      href: "/blog",
-    },
-    // You can add more navigation items
-  ],
-}
-```
-
-This configures the website's navigation menu, supporting:
-- Regular links
-- Dropdown menus with submenus
-
-### 2.6 SEO Configuration
-
-```typescript
-seo: {
-  metadataBase: new URL("https://yourdomain.com"),
-  alternates: {
-    canonical: './',
-  },
-  openGraph: {
-    type: "website" as const,
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image" as const,
-    creator: "@yourtwitterusername",
-  },
-}
-```
-
-These configurations are used for:
-- Search engine optimization
-- Social media sharing cards
-- Website metadata
-
-### 2.7 RSS Subscription Configuration
-
-```typescript
-rss: {
-  title: "Your blog title",
-  description: "Blog description",
-  feedLinks: {
-    rss2: "/rss.xml",
-    json: "/feed.json",
-    atom: "/atom.xml",
-  },
-}
-```
-
-These configurations are used to generate:
-- RSS 2.0 feeds
-- JSON Feed
-- Atom feeds
-
-## 3. How to modify configuration
-
-1. Open the `src/lib/config.ts` file
-2. Modify the corresponding configuration items according to your needs
-3. After saving the file, Next.js will automatically rebuild and apply the new configuration
-
-Notes:
-- Ensure all URLs are valid
-- Image links should be accessible
-- Social media links should be complete URLs
-- After modifying configuration, it's recommended to check the website's:
-  - Homepage display
-  - Navigation menu
-  - SEO information
-  - Social media sharing effects
-  - RSS feeds
-
-## 4. How to generate RSS feeds
-
-Modify the configuration in the scripts/generate-rss.js file, then run:
-
-```bash
-npm run generate-rss
-```
-
-## 5. How to generate Sitemap
-
-Modify the configuration in the scripts/generate-sitemap.js file, then run:
-
-```bash
-npm run generate-sitemap
+```text
+Monday                   340 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.45 % 
+Tuesday                  238 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.41 % 
+Wednesday                391 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.47 % 
+Thursday                 288 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.39 % 
+Friday                   622 commits         ██████░░░░░░░░░░░░░░░░░░░   24.60 % 
+Saturday                 214 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   08.47 % 
+Sunday                   435 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.21 % 
 ```
 
 
-## Support
+📊 **This Week I Spent My Time On** 
 
-This repository is open source, welcome to star and fork. If you find this repository helpful, you can support me in the following ways:
+```text
+🕑︎ Time Zone: Asia/Shanghai
+
+💬 Programming Languages: 
+TypeScript               22 hrs 55 mins      ████████████████████░░░░░   81.08 % 
+Markdown                 3 hrs 33 mins       ███░░░░░░░░░░░░░░░░░░░░░░   12.58 % 
+JSON                     38 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.25 % 
+CSS                      16 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.99 % 
+Astro                    16 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.96 % 
+
+🔥 Editors: 
+Cursor                   21 hrs 55 mins      ███████████████████░░░░░░   77.53 % 
+VS Code                  6 hrs 21 mins       ██████░░░░░░░░░░░░░░░░░░░   22.47 % 
+
+💻 Operating System: 
+Mac                      28 hrs 16 mins      █████████████████████████   100.00 % 
+```
 
 
-<h2 align=center><a href="https://guangzhengli.com/blog/zh/build-nextjs-template">Support the best Next.js indie developer starter template</a></h2>
+ Last Updated on 05/09/2025 00:41:04 UTC
+<!--END_SECTION:waka-->
 
-<h3 align=center><a href="https://nextdevkit.com">NextDevKit</a></h3>
+</td></tr>
 
-![nextdevkit](/public/blog/nextdevkit-template.png)
+</table>
+
+
+<!-- ########################################## 分割 ########################################## -->
+<img width="200%" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/hr.gif" />
+
+<div align="center">
+
+<!-- run 图片 -->
+<img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/man_run.png" width="250" height="250" />
+
+<!-- Joke 笑话 -->
+<div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-jokes.vercel.app/api?hideBorder&bgColor=%23121212" />
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-jokes.vercel.app/api?hideBorder&bgColor=%ffffff" />
+    <img alt="Jokes Card" src="https://readme-jokes.vercel.app/api?hideBorder&bgColor=%23121212" />
+  </picture>
+</div>
+
+<!-- github-readme-streak-stats 连续提交代码天数记录 -->
+<img align="left" width="150" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/left.png" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=sun0225SUN&theme=dark&hide_border=true" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=sun0225SUN&theme=light&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sun0225SUN&theme=dark&hide_border=true" />
+</picture>
+<img align="right" width="150"  src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/right.png" />
+
+<!-- metrics 基础资料 -->
+<img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/base.svg" />
+
+<!-- GitHub Activity Graph GitHub 活动图 -->
+<table>
+  <tr>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=sun0225SUN&theme=xcode&bg_color=FF000000&hide_border=true" />
+        <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=sun0225SUN&theme=xcode&bg_color=FF000000&color=000000&hide_border=true" />
+        <img src="https://github-readme-activity-graph.vercel.app/graph?username=sun0225SUN&theme=xcode&bg_color=FF000000&hide_border=true" />
+      </picture>
+  </tr>
+</table>
+
+</div>
+
+<!-- ########################################## 分割 ########################################## -->
+<img width="200%" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/hr.gif" />
+
+<div align="center" >
+
+<!-- just img 图片 -->
+<img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/mb.png" width="250" height="250" />
+
+<!-- Quotes 名人名言 -->
+<div><img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><br/></div>
+  
+<!-- GitHub 奖杯🏆 -->
+<div><img src="https://github-profile-trophy.vercel.app/?username=sun0225SUN&theme=gruvbox&row=1&column=7&no-frame=true&no-bg=true" /><br/></div>
+
+<!-- GitHub 数据统计 -->
+<img height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=sun0225SUN&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&line_height=21text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
+<img height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=sun0225SUN&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /><br>
+
+<!-- Wakatime Graph-->
+<table>
+  <tr>
+    <td><img src="https://wakatime.com/share/@42d0678c-368b-448b-9a77-5d21c5b55352/d07b5f65-d3e1-4896-897c-1695c560a7dc.svg" width="500" alt="Wakatime"/></td>
+    <td><img src="https://wakatime.com/share/@42d0678c-368b-448b-9a77-5d21c5b55352/39a6f115-6058-44ce-95da-c3b2cbc9e831.svg" width="500" alt="Wakatime"/></td>
+  </tr>
+</table>
+
+</div>
+
+<!-- ########################################## 分割 ########################################## -->
+<img width="200%" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/hr.gif" />
+
+<div align="center" >
+
+<!-- just img 图片 -->
+<img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/man.png" width="250" height="250" />
+
+<!--  skill badge 技能徽章 -->
+
+![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat)
+![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat)
+![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat)
+![Vue.js Badge](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=fff&style=flat)
+![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
+![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat)
+![Spring Badge](https://img.shields.io/badge/Spring-6DB33F?logo=spring&logoColor=fff&style=flat)
+![Qt Badge](https://img.shields.io/badge/Qt-41CD52?logo=qt&logoColor=fff&style=flat)
+![MongoDB Badge](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat)
+![Django Badge](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=flat)
+
+![C Badge](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=fff&style=flat)
+![C++ Badge](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=flat)
+![C Sharp Badge](https://img.shields.io/badge/C%20Sharp-239120?logo=csharp&logoColor=fff&style=flat)
+![R Badge](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=fff&style=flat)
+![PHP Badge](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=fff&style=flat)
+![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat)
+![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)
+![jQuery Badge](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=fff&style=flat)
+![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=flat)
+![Android Badge](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=fff&style=flat)
+![Three.js Badge](https://img.shields.io/badge/Three.js-092E20?logo=threedotjs&logoColor=fff&style=flat)
+
+![Xiaomi Badge](https://img.shields.io/badge/Xiaomi-FF6900?logo=xiaomi&logoColor=fff&style=flat)
+![Linux Badge](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=000&style=flat)
+![Lenovo Badge](https://img.shields.io/badge/Lenovo-E2231A?logo=lenovo&logoColor=fff&style=flat)
+![Windows Badge](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=fff&style=flat)
+![Visual Studio Code Badge](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=flat)
+![Adobe Photoshop Badge](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?logo=adobephotoshop&logoColor=fff&style=flat)
+![Visual Studio Badge](https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=fff&style=flat)
+![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)
+
+<!-- programming tool icon 编程工具图标 -->
+<img src="https://skillicons.dev/icons?i=ps,ai,pr,c,cpp,cs,ts,discord,twitter,mongodb,instagram,idea,git" /><br>
+
+<!-- svg -->
+<img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/webpack-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" /> 
+<img src="https://techstack-generator.vercel.app/redux-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/java-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/eslint-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/nginx-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" /><br>
+
+<!-- gif -->
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/html.webp">
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/cssgif.webp">
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/vscode.webp">
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/react.webp">
+<img height="95" width="95" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/vue.webp">
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/python.webp">
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/js.webp">
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/github.webp">
+
+<!-- profile-3d-contrib 3D 贡献图-->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-3d-contrib/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-3d-contrib/profile-gitblock.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-3d-contrib/profile-night-rainbow.svg" />
+</picture>
+
+</div>
+
+<!-- ########################################## 分割 ########################################## -->
+<img width="200%" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/hr.gif" />
+
+<!-- GitHub metrics 信息指标 -->
+<div align="center">
+
+<!-- just img 图片 -->
+<img width="36%" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/githubgif.gif" />
+
+<!-- first form 第一个表格 -->
+<table>
+  <tr>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/people.followers.svg" alt="people.followers" /></td>
+  </tr>
+</table>
+
+<!-- second form 第二个表格 -->
+<table>
+  <tr>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/languages.indepth.svg" alt="languages.indepth" /></td>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/reactions.svg" alt="reactions" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/followup.indepth.svg" alt="followup.indepth" /></td>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/repositories.pinned.svg" alt="repositories.pinned" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/wakatime.svg" alt="wakatime" /></td>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/habits.charts.svg" alt="habits.charts" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/isocalendar.fullyear.svg" alt="isocalendar.fullyear" /></td>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/calendar.full.svg" alt="calendar.full" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/activity.svg" alt="activity" /></td>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/stackoverflow.svg" alt="stackoverflow" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/stars.svg" alt="stars" /></td>
+    <td><img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/stargazers.chartist.svg" alt="stargazers.chartist" /></td>
+  </tr>
+</table>
+
+<img width="120%" src="https://repobeats.axiom.co/api/embed/dd42bad8effa7ab44d2f3124414ee110611e044a.svg" />
+
+<!-- just img 图片 -->
+<img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/icon.png" /></div>
+</div>
