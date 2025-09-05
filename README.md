@@ -21,7 +21,7 @@
 <p align="center">
     <a href="https://www.rust-lang.org/"> <img src="https://img.shields.io/badge/rust-d07f4f.svg?&style=for-the-badge&logo=rust&logoColor=white"/> </a>
     <a href="https://golang.org/"> <img src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white"/> </a>
-    <a href="https://spring.io/"> <img src="https://img.shields.io/badge/Spring-2357A143?style=for-the-badge&logo=SPRING&logoColor=white"/> </a>
+    <a href="https://spring.io/"> <img src="https://img.shields.io/badge/Java-2357A143?style=for-the-badge&logo=JAVA&logoColor=white"/> </a>
     <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /> </a>
     <a href="https://nextjs.org/"> <img src="https://img.shields.io/badge/nextjs-23008080?style=for-the-badge&logo=NEXTJS&logoColor=white"/> </a>
 </p>
