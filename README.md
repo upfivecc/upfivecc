@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- 打字效果 -->
-  <a href="https://github.com/upfivecc"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=330&lines=console.log(%22Hello+World!%22);I'm+JK%2C+Have+a+nice+day!" alt="Typing SVG" /></a>
+  <a href="https://github.com/upfivecc"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=330&lines=console.log(%22Hello+World!%22);I'm+UpFive%2C+Have+a+nice+day!" alt="Typing SVG" /></a>
 
   <!-- 敲代码图片 -->
   <a href="https://sm.ms/image/n2wPkGMSgY7eKE3" target="_blank"><img src="https://s2.loli.net/2024/05/16/n2wPkGMSgY7eKE3.png" width="400" ></a>
@@ -31,9 +31,9 @@
 
 😃 嗨，你好，我是UpFive，一位Web3领域的前端开发 and 全栈开发
 
-🎨 热爱编程、Web3、跑步、生活
+🎨 热爱编程、Web3、大模型、跑步、生活
 
-💗 Love and peace
+💗 每一个不曾起舞的日子都是对生命的辜负～
 
 ### Blog Posts
 
@@ -42,15 +42,17 @@
 
 ### Languages and Tools
 
+![Java Badge](https://img.shields.io/badge/Java-3178C6?logo=java&logoColor=fff&style=flat)
+![SpringBoot Badge](https://img.shields.io/badge/SpringBoot-393?logo=nospringbootdedotjs&logoColor=fff&style=flat)
+![SpringAI Badge](https://img.shields.io/badge/SpringAI-646CFF?logo=SpringAI&logoColor=fff&style=flat)
+
 ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat)
 ![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat)
 ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
-![Vue.js Badge](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=fff&style=flat)
 
 ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat)
 ![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)
-![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=flat)
 
 ![Linux Badge](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=000&style=flat)
 ![Windows Badge](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=fff&style=flat)
