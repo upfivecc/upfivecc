@@ -39,6 +39,7 @@
 
 - [Spring AI 特性](https://juejin.cn/post/7540683686410403879)
 - [Spring AI 介绍](https://juejin.cn/post/7540184817917378601)
+- [Web3 概念](http://upfive.cc/course/web3-base-web3-concept)
 
 ### Languages and Tools
 
