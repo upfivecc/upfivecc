@@ -3,9 +3,9 @@ export const config = {
     title: "Upfive blog",
     name: "Upfive blog",
     description: "Upfive blog",
-    keywords: ["Upfive blog", "AI", "Full Stack Developer"],
-    url: "https://xxx.com",
-    baseUrl: "https://xxx.com",
+    keywords: ["Upfive blog", "AI", "Web3", "Full Stack Developer"],
+    url: "https://upfive.cc",
+    baseUrl: "https://upfive.cc",
     image: "https://xxx.com/og-image.png",
     favicon: {
       ico: "/favicon.ico",
@@ -32,8 +32,8 @@ export const config = {
   social: {
     github: "https://github.com/upfive",
     x: "https://x.com/upfive",
-    xiaohongshu: "https://www.xiaohongshu.com/user/profile/xxx",
-    wechat: "https://storage.xxx.com/images/wechat-official-account.png",
+    xiaohongshu: "https://www.xiaohongshu.com/user/profile/68ae5777000000001a0093a2",
+    wechat: "https://ps.ssl.qhimg.com/t02b9c1ee9104934135.jpg",
     buyMeACoffee: "https://www.buymeacoffee.com/xxx",
   },
   giscus: {
@@ -51,10 +51,14 @@ export const config = {
         title: "课程", 
         href: "/course",
       },
+      { 
+        title: "动态", 
+        href: "/timeline",
+      }
     ],
   },
   seo: {
-    metadataBase: new URL("https://xxx.com"),
+    metadataBase: new URL("https://www.upfive.cc"),
     alternates: {
       canonical: './',
     },
