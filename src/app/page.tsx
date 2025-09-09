@@ -1,13 +1,23 @@
+// /Users/upfive/Workspace/frontprojects/upfivecc/src/app/page.tsx
 import { allBlogs } from "content-collections";
 import Link from "next/link";
 import count from 'word-count'
 import { config } from "@/lib/config";
 import { formatDate } from "@/lib/utils";
 
-export default function Home() {
+export default async function Home({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+  const { page } = await searchParams;
   const blogs = allBlogs
     .filter((blog: any) => blog.featured === true)
     .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  // Pagination logic
+  const currentPage = parseInt(page || "1", 10);
+  const postsPerPage = 10;
+  const totalPages = Math.ceil(blogs.length / postsPerPage);
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  const currentBlogs = blogs.slice(startIndex, endIndex);
 
   const socialLinks = [
     { name: "赞赏", key: "buyMeACoffee" },
@@ -46,7 +56,7 @@ export default function Home() {
       <div className="space-y-4">
         <h2 className="text-2xl font-bold mb-8">推荐阅读</h2>
         <div className="space-y-8">
-          {blogs.map((blog: any) => (
+          {currentBlogs.map((blog: any) => (
             <article key={blog.slug} className="">
               <Link href={`/blog/${blog.slug}`}>
                 <div className="flex flex-col space-y-2">
@@ -65,6 +75,33 @@ export default function Home() {
               </Link>
             </article>
           ))}
+        </div>
+        
+        {/* Pagination Controls */}
+        <div className="flex justify-between items-center mt-12">
+          <div>
+            {currentPage > 1 && (
+              <Link 
+                href={`/?page=${currentPage - 1}`} 
+                className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+              >
+                Previous
+              </Link>
+            )}
+          </div>
+          <div className="text-gray-600">
+            Page {currentPage} of {totalPages}
+          </div>
+          <div>
+            {currentPage < totalPages && (
+              <Link 
+                href={`/?page=${currentPage + 1}`} 
+                className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+              >
+                Next
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>
