@@ -58,6 +58,18 @@ export default function RootLayout({
         <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
         <link rel="alternate" type="application/json" title="JSON" href="/feed.json" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?5ecc3030644ac8c617533a5a475bf45c";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+          `,
+        }} />
+
       </head>
       <body className="min-w-md overflow-x-hidden">
         <Header />

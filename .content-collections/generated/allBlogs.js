@@ -214,7 +214,7 @@ export default [
     "date": "2025-01-06T21:10:00+08:00",
     "updated": "2025-01-06T21:10:00+08:00",
     "featured": true,
-    "summary": "区块链 介绍",
+    "summary": "区块链的概念，原理、特性及设计理念",
     "keywords": [
       "独立开发",
       " 区块链",
