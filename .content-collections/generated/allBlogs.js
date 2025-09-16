@@ -127,6 +127,150 @@ export default [
     "slug": "ai-prompt-wotun-teacher"
   },
   {
+    "content": "## centos安装docker+docker-compose\n\n### 1. 指定docker镜像源\n``` shell\nyum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo\n\n```\n\nhttps://www.runoob.com/docker/docker-tutorial.html\n\n### 2. 阿里软件包\n`https://mirrors.aliyun.com/centos/7.9.2009/extras/x86_64/Packages/`\n\n### 3. docker安装步骤\n`https://docs.docker.com/engine/install/centos/`\n\n### 4. 使用官方安装脚本自动安装\n`curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun`\n\n### 手动安装：\n卸载旧版本\n```shell\n$ sudo yum remove docker \\\n                  docker-client \\\n                  docker-client-latest \\\n                  docker-common \\\n                  docker-latest \\\n                  docker-latest-logrotate \\\n                  docker-logrotate \\\n                  docker-engine\n```\n\n\n\n#### 1、更新系统\n`sudo yum update`\n\n#### 2、添加docker存储库\n```shell\nsudo yum install -y yum-utils\n\nsudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo\n```\n\n#### 3、安装docker ce（社区版）\n `sudo yum install docker-ce`\n\n#### 4、docker相关命令\n```text\n 启动docker\nsudo systemctl start docker\n\n 停止docker\nsudo systemctl stop docker\n\n重启docker\nsudo systemctl restart docker\n\n设置开机启动\nsudo systemctl enable docker\n\n\n配置docker镜像加速器\n`/etc/docker/daemon.json`\n\n{\n  \"registry-mirrors\":[\n    \"https://qw4855zt.mirror.aliyuncs.com\",\n    \"https://hub-mirror.c.163.com\",\n    \"https://docker.m.daocloud.io\",\n    \"https://cr.console.aliyun.com\",\n    \"https://docker.mirrors.ustc.edu.cn\",\n    \"https://reg-mirror.qiniu.com\"\n  ]\n}\n\n阿里云专属镜像加速器地址:\n\nhttps://cr.console.aliyun.com/cn-hangzhou/instances/mirrors\n\n```\n\n### 5. 验证docker是否安装成功\n`sudo docker pull hello-world`\n\n`docker run hello-world`\n\n### 6. 卸载docker\n`yum remove docker-ce`\n\n### 7. 删除镜像、容器、配置文件等内容\n`rm -rf /var/lib/docker`\n\n> 参考文档 https://www.runoob.com/docker/centos-docker-install.html\n\n\n### 8. 安装docker-compose\n\n#### 1、手动下载，可修改版本号\n`curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose`\n\n\n#### 2、添加执行权限\n`chmod +x /usr/local/bin/docker-compose`\n\n#### 3、检查docker compose版本\n`docker-compose version`\n\n### 9. 阿里云私有镜像库\n````\nsudo docker login --username=sky****@sina.com registry.cn-hangzhou.aliyuncs.com\n````\n\n`registry.cn-hangzhou.aliyuncs.com/metayoo/metayoo`\n\n\n### 10. docker查看容器日志\n`\n```shell\ndocker logs -f 容器ID\n```\n\n### 11. docker 清理没有标签的镜像\n```shell\ndocker images | grep none | awk '{print $3}' | xargs docker rmi\n```",
+    "title": "docker 使用",
+    "date": "2021-01-08T21:10:00+08:00",
+    "updated": "2021-01-08T21:10:00+08:00",
+    "featured": true,
+    "summary": "Docker 安装及日常使用",
+    "keywords": [
+      "独立开发",
+      "docker"
+    ],
+    "_meta": {
+      "filePath": "devops-docker-1.md",
+      "fileName": "devops-docker-1.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "devops-docker-1"
+    },
+    "slug": "devops-docker-1"
+  },
+  {
+    "content": "## Dockerfile\n\n```shell\n# 使用官方 MySQL 镜像作为基础镜像\nFROM mysql:8.4\n\n\n# 暴露 MySQL 默认端口\nEXPOSE 3306\n\nENV TZ=Asia/Shanghai\n\n# 设置 MySQL 根用户密码环境变量\nENV MYSQL_ROOT_PASSWORD=Wzp123!@#\n```\n\n## docker-compose.yml\n\n```shell\nversion: '3'\n\nservices:\n  mydb:\n    image: mymysql\n    container_name: mymysql\n    restart: always\n    volumes:\n      - ./my.cnf:/etc/mysql/my.cnf\n      - ./conf.d:/etc/mysql/conf.d\n      - ./data:/var/lib/mysql\n      - ./logs:/var/log\n    environment:\n      TZ: Asia/Shanghai\n      MYSQL_ROOT_PASSWORD: Wzp123!@#\n    ports:\n      - \"3306:3306\"\n\n\n```\n\n## my.conf\n\n```conf\n# For advice on how to change settings please see\n# http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html\n\n[client]\ndefault-character-set=utf8\n\n[mysqld]\n#\n# Remove leading # and set to the amount of RAM for the most important data\n# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.\n# innodb_buffer_pool_size = 128M\n#\n# Remove leading # to turn on a very important data integrity option: logging\n# changes to the binary log between backups.\n# log_bin\n#\n# Remove leading # to set options mainly useful for reporting servers.\n# The server defaults are faster for transactions and fast SELECTs.\n# Adjust sizes as needed, experiment to find the optimal values.\n# join_buffer_size = 128M\n# sort_buffer_size = 2M\n# read_rnd_buffer_size = 2M\nbind-address = 0.0.0.0\ndatadir=/var/lib/mysql\nsocket=/var/lib/mysql/mysql.sock\n\n# Disabling symbolic-links is recommended to prevent assorted security risks\nsymbolic-links=0\n\nlog-error=/var/log/mysqld.log\npid-file=/var/run/mysqld/mysqld.pid\n```\n\n## mysql 启动挂载本地文件夹报错报错\n\n\n1. **挂载的宿主目录权限不对**\n    \n    - 容器内 MySQL 用户 UID/GID 默认是 **999:999**。\n        \n    - macOS 文件系统的权限和 UID/GID 不匹配，即使你用 chown 改了宿主目录，容器里的 chown 仍然会报错。\n        \n    \n2. **socket 文件还没生成**\n    \n    - mysql.sock 文件只有 MySQL 启动并初始化完成后才会生成。\n        \n    - 如果挂载目录不可写，初始化失败，mysql.sock 就不存在，chown 自然报错。\n        \n    \n3. **Docker Desktop 的文件系统限制**\n    \n    - Mac 上挂载本地目录给 Linux 容器时，某些权限操作（如 chown）会被忽略或失败。\n\n### **方案 A：使用 Docker 卷（最稳定）**\n\n```shell\ndocker volume create mysql-data\n\ndocker run -d \\\n  --name mysql8 \\\n  -e MYSQL_ROOT_PASSWORD=123456 \\\n  -v mysql-data:/var/lib/mysql \\\n  -p 3306:3306 \\\n  mysql:8\n```\n\n\n- 不挂载本地目录，不受权限限制。\n    \n- Mac 上启动几乎不会出错。\n\n### **方案 B：挂载本地目录 + 权限修复**\n\n1. 创建空目录：\n```shell\nmkdir -p ~/mysql-data\nrm -rf ~/mysql-data/*\n```\n\n2. 设置 UID/GID 和权限：\n```shell\nsudo chown -R 999:999 ~/mysql-data\nsudo chmod -R 700 ~/mysql-data\n```\n\n3. 启动容器：\n```shell\ndocker run -d \\\n  --name mysql8 \\\n  -e MYSQL_ROOT_PASSWORD=123456 \\\n  -v ~/mysql-data:/var/lib/mysql \\\n  -p 3306:3306 \\\n  mysql:8\n```",
+    "title": "Docker 安装 mysql",
+    "date": "2021-01-09T21:10:00+08:00",
+    "updated": "2021-01-09T21:10:00+08:00",
+    "featured": true,
+    "summary": "Docker 安装mysql",
+    "keywords": [
+      "独立开发",
+      "Docker"
+    ],
+    "_meta": {
+      "filePath": "devops-docker-2.md",
+      "fileName": "devops-docker-2.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "devops-docker-2"
+    },
+    "slug": "devops-docker-2"
+  },
+  {
+    "content": "## 将容器的nginx.conf复制到主机下\n```shell\ndocker run --rm --entrypoint=cat nginx /etc/nginx/nginx.conf > /host/path/nginx.conf\n\n```\n\n\n## Dockerfile:\n```shell\nFROM nginx:1.27-alpine\n\nWORKDIR /root/app/\nCOPY ./html /usr/share/nginx/html\nCOPY ./conf.d/nginx.conf /etc/nginx/nginx.conf\n\nEXPOSE 80\n\nCMD [\"nginx\", \"-g\", \"daemon off;\"]\n\n```\n\n\n## docker-compose.yml:\n```yaml\nversion: '3'\n\nservices:\n  mynginx:\n    image: nginx:1.27-alpine-otel\n    container_name: mynginx\n    restart: always\n    ports:\n      - \"80:80\"\n      - \"443:443\"\n    volumes:\n      - ./nginx.conf:/etc/nginx/nginx.conf\n      - ./conf.d:/etc/nginx/conf.d\n      - ./html:/usr/share/nginx/html\n      - ./data:/usr/share/nginx/data\n      - ./logs:/var/log/nginx\n    environment:\n      - TZ=Asia/Shanghai\n    extra_hosts:\n      - 'host.docker.internal:host-gateway'\n\n```\n\n## nginx.conf\n\n```conf\n\nuser  nginx;\nworker_processes  auto;\n\nerror_log  /var/log/nginx/error.log notice;\npid        /var/run/nginx.pid;\n\n\nevents {\n    worker_connections  1024;\n}\n\n\nhttp {\n    include       /etc/nginx/mime.types;\n    default_type  application/octet-stream;\n\n    log_format  main  '$remote_addr - $remote_user [$time_local] \"$request\" '\n                      '$status $body_bytes_sent \"$http_referer\" '\n                      '\"$http_user_agent\" \"$http_x_forwarded_for\"';\n\n    access_log  /var/log/nginx/access.log  main;\n\n    sendfile        on;\n    #tcp_nopush     on;\n\n    keepalive_timeout  65;\n\n    #gzip  on;\n\n    include /etc/nginx/conf.d/*.conf;\n}\n```\n\n## 具体的conf配置参考\n```conf\nserver {\n    listen       80;\n    server_name  boss.aiwendao.cn;\n\n    location / {\n        #root   /usr/share/nginx/html;\n        #index  index.html index.htm;\n        proxy_pass http://host.docker.internal:3000;\n    }\n\n    location ~ /(wechat|api|checkLogin) {\n       proxy_pass http://host.docker.internal:8081;\n    }\n\n    location /MP_verify_tWNNuHTZiGzJzBuW.txt {\n        return 200 'tWNNuHTZiGzJzBuW';\n    }\n\n    #charset utf-8;\n\n    #access_log  logs/host.access.log  main;\n\n\n    #error_page  404              /404.html;\n\n    # redirect server error pages to the static page /50x.html\n\n    error_page   500 502 503 504  /50x.html;\n\n    location = /50x.html {\n        root   html;\n    }\n\n}\n\nserver {\n\n    listen 443 ssl;\n\n    server_name boss.aiwendao.cn;\n\n    ssl_certificate \"/usr/share/nginx/data/boss.aiwendao.cn.full_chain_ecc.crt\";\n    #填写证书私钥文件绝对路径\n    ssl_certificate_key \"/usr/share/nginx/data/boss.aiwendao.cn.key.pem\";\n    ssl_session_cache shared:SSL:1m;\n    ssl_session_timeout 5m;\n\n    ssl_protocols TLSv1.2 TLSv1.3;\n    ssl_prefer_server_ciphers on;\n    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256';\n\n\n    location / {\n        #root   /usr/share/nginx/html;\n        #index  index.html index.htm;\n        proxy_pass http://host.docker.internal:3000;\n    }\n\n    location ~ /(wechat|api|checkLogin) {\n       proxy_pass http://host.docker.internal:8081;\n    }\n\n}\n\n```",
+    "title": "Docker 安装 nginx",
+    "date": "2021-01-10T21:10:00+08:00",
+    "updated": "2021-01-10T21:10:00+08:00",
+    "featured": true,
+    "summary": "Docker 安装nginx",
+    "keywords": [
+      "独立开发",
+      "Docker",
+      "nginx"
+    ],
+    "_meta": {
+      "filePath": "devops-docker-3.md",
+      "fileName": "devops-docker-3.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "devops-docker-3"
+    },
+    "slug": "devops-docker-3"
+  },
+  {
+    "content": "## Dockerfile\n\n```dockerfile\n# 使用官方 MinIO 镜像作为基础镜像\nFROM minio/minio\n\nWORKDIR /root/app/\n\n# 设置环境变量\nENV MINIO_ROOT_USER=minioadmin\nENV MINIO_ROOT_PASSWORD=minioadmin\n\n# 暴露 MinIO 服务的端口\nEXPOSE 9000\nEXPOSE 9001\n\n# 定义启动命令\nCMD [\"minio\", \"server\", \"./data\"]\n\n```\n\n## docker-compose.yml\n```yaml\nversion: '3'\n\nservices:\n  myminio:\n    image: myminio\n    container_name: myminio\n    restart: always\n    ports:\n      - \"9000:9000\"\n      - \"9001:9001\"\n    volumes:\n      - /root/app/minio/data:/root/app/data\n    environment:\n      - TZ=Asia/Shanghai\n      - MINIO_ROOT_USER=minioadmin\n      - MINIO_ROOT_PASSWORD=minioadmin\n    command: server /root/app/data  --console-address \":9001\"\n```",
+    "title": "Docker 安装 minio",
+    "date": "2021-01-11T21:10:00+08:00",
+    "updated": "2021-01-11T21:10:00+08:00",
+    "featured": true,
+    "summary": "Docker 安装minio",
+    "keywords": [
+      "独立开发",
+      "Docker",
+      "minio"
+    ],
+    "_meta": {
+      "filePath": "devops-docker-4.md",
+      "fileName": "devops-docker-4.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "devops-docker-4"
+    },
+    "slug": "devops-docker-4"
+  },
+  {
+    "content": "## Dockerfile\n```dockerfile\n# 使用官方 redis 镜像作为基础镜像\nFROM redis:latest\n\nWORKDIR /root/app/\n\n# 设置环境变量\n\n\n# 暴露 redis 服务的端口\nEXPOSE 6379\n\n# 定义启动命令\nCMD [[\"redis-server\", \"--appendonly\", \"yes\"]\n\n```\n\n## docker-compose.yml\n```yaml\nversion: '3'\n\nservices:\n  myredis:\n    image: myredis\n    container_name: myredis\n    restart: always\n    ports:\n      - \"6379:6379\"\n    volumes:\n      - /root/app/redis/data:/root/app/data\n    environment:\n      - TZ=Asia/Shanghai\n    command: [\"redis-server\", \"--appendonly\", \"yes\"]\n```",
+    "title": "Docker 安装 redis",
+    "date": "2021-01-12T21:10:00+08:00",
+    "updated": "2021-01-12T21:10:00+08:00",
+    "featured": true,
+    "summary": "Docker 安装redis",
+    "keywords": [
+      "独立开发",
+      "Docker",
+      "redis"
+    ],
+    "_meta": {
+      "filePath": "devops-docker-5.md",
+      "fileName": "devops-docker-5.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "devops-docker-5"
+    },
+    "slug": "devops-docker-5"
+  },
+  {
+    "content": "## Dockerfile\n```dockerfile\n# 使用官方 PostgreSQL 镜像作为基础镜像\nFROM postgres:17\n\n\n# 暴露 MySQL 默认端口\nEXPOSE 5432\n\nENV TZ=Asia/Shanghai\n\n# 设置 MySQL 根用户密码环境变量\nENV MYSQL_ROOT_PASSWORD=Wzp123!@#\n\n\n```\n\n## docker-compose.yml\n\n```yaml\nversion: '3'\n\nservices:\n  mypostgresql:\n    image: mypostgresql\n    container_name: mypostgresql\n    restart: always\n    volumes:\n      - ./my.cnf:/etc/mysql/my.cnf\n      - ./config/postgresql.conf:/var/lib/postgresql/config/postgresql.conf\n      - ./config/pg_hba.conf:/var/lib/postgresql/config/pg_hba.conf\n      - ./data:/var/lib/postgresql/data\n      - ./logs:/var/log/postgresql\n    environment:\n      TZ: Asia/Shanghai\n      POSTGRES_PASSWORD: Wzp123!@#\n    ports:\n      - \"5432:5432\"\n\n```",
+    "title": "Docker 安装 PostgreSQL",
+    "date": "2021-01-13T21:10:00+08:00",
+    "updated": "2021-01-13T21:10:00+08:00",
+    "featured": true,
+    "summary": "Docker 安装PostgreSQL",
+    "keywords": [
+      "独立开发",
+      "Docker",
+      "PostgreSQL"
+    ],
+    "_meta": {
+      "filePath": "devops-docker-6.md",
+      "fileName": "devops-docker-6.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "devops-docker-6"
+    },
+    "slug": "devops-docker-6"
+  },
+  {
+    "content": "官方文档 `https://github.com/acmesh-official/acme.sh/wiki/`\n\n## acme证书安装\n\n```shell\n// 安装 ACME 脚本\ncurl https://get.acme.sh | sh\n\n// 设置acme.sh别名，方便后续使用\nalias acme.sh=~/.acme.sh/acme.sh\n\n// 设置 ACME 脚本自动更新\nacme.sh --upgrade --auto-upgrade\n\n// 由于 ZeroSSL 作为默认 CA，必须先注册帐户才能颁发新证书，故而更换为 Letsencrypt。\nacme.sh --set-default-ca --server letsencrypt\n\n// 更新所有域名\nacme.sh --renew-all   --force\n\n//  更新具体的域名\nacme.sh --renew -d xxx.com  --force\n```\n\n\n## 域名配置证书\n\n参考网址 `https://www.cnblogs.com/waw/p/18036926`\n\n- 步骤一：在boss.aiwendao.cn的nginx配置文件中，指向静态目录\n\n```conf\nlocation / {\n        root   /usr/share/nginx/html;\n        index  index.html index.htm;\n        #proxy_pass http://host.docker.internal:3000;\n}\n```\n\n\n- 步骤二： 生成证书文件\n```shell\nacme.sh --issue -d life.aiwendao.cn  --webroot /root/app/nginx/html/\n```\n\n- 步骤三：拷贝证书\n\n```shell\nacme.sh --install-cert -d boss.aiwendao.cn --cert-file /root/app/nginx/data/boss.aiwendao.cn.cert.pem --key-file /root/app/nginx/data/boss.aiwendao.cn.key.pem --fullchain-file /root/app/nginx/data/boss.aiwendao.cn.fullchain.pem\n```\n\n## 证书自动续期配置\n```text\nhttps://jike.dev/posts/set-acme-certificate-with-auto-renew/\n```",
+    "title": "免费SSL证书配置",
+    "date": "2021-01-14T21:10:00+08:00",
+    "updated": "2021-01-14T21:10:00+08:00",
+    "featured": true,
+    "summary": "免费SSL证书配置",
+    "keywords": [
+      "独立开发",
+      "SSL证书"
+    ],
+    "_meta": {
+      "filePath": "devops-ssl-acme-1.md",
+      "fileName": "devops-ssl-acme-1.md",
+      "directory": ".",
+      "extension": "md",
+      "path": "devops-ssl-acme-1"
+    },
+    "slug": "devops-ssl-acme-1"
+  },
+  {
     "content": "这篇文章包含markdown语法基本的内容。\n\n在markdown里可以使用 \\ 对特殊符号进行转义。  \n\n# 1. 标题\n\n**语法**\n```md\n# This is an <h1> tag\n## This is an <h2> tag\n### This is an <h3> tag\n#### This is an <h4> tag\n```\n\n**实例**\n\n# This is an h1 tag\n## This is an h2 tag\n### This is an h3 tag\n#### This is an h4 tag\n\n# 2. 强调和斜体\n\n**语法**\n```md\n*This text will be italic*\n_This will also be italic_\n\n**This text will be bold**\n__This will also be bold__\n```\n\n**实例**\n\n*This text will be italic*\n_This will also be italic_\n\n**This text will be bold**\n__This will also be bold__\n\n# 3. 有序列表和无序列表\n\n**语法**\n```md\n* Item 1\n* Item 2\n* Item 3\n\n1. Item 1\n2. Item 2\n3. Item 3\n```\n\n**实例**\n* Item 1\n* Item 2\n* Item 3\n\n1. Item 1\n2. Item 2\n3. Item 3\n\n# 4. 图片\n\n**语法**\n```\n![img-name](img-url)\n```\n\n**实例**\n![微信公众号](https://storage.guangzhengli.com/images/wechat-official-account.png)\n\n# 5. 超链接\n\n**语法**\n```\n[link-name](link-url)\n```\n\n**实例**\n\n[微信公众号链接](https://storage.guangzhengli.com/images/wechat-official-account.png)\n\n# 6. 引用\n\n**语法**\n```md\n> 引用本意是引用别人的话之类  \n```\n\n**实例**\n\n> If you please draw me a sheep!  \n> 不想当将军的士兵, 不是好士兵.  \n\n# 7. 单行代码\n\n**语法**\n```\n`This is an inline code.`\n```\n\n**实例**\n\n`同样的单行代码, 我经常用来显示特殊名词`\n\n# 8. 多行代码\n\n**语法**\n\n```md\n​```js\nfor (var i=0; i<100; i++) {\n    console.log(\"hello world\" + i);\n}\n​```\n```\n\n**实例**\n\n```js\nfor (var i=0; i<100; i++) {\n    console.log(\"hello world\" + i);\n}\n```\n\n也可以通过缩进来显示代码, 下面是示例:  \n\n    console.loe(\"Hello_World\");\n\n# 9. 表格\n\n## Table\n\n| Table Header 1 | Table Header 2 | Table Header 3 |\n| - | - | - |\n| Division 1 | Division 2 | Division 3 |\n| Division 1 | Division 2 | Division 3 |\n| Division 1 | Division 2 | Division 3 |\n\n# 参考链接\n\n- https://guides.github.com/features/mastering-markdown/  \n- https://help.github.com/articles/basic-writing-and-formatting-syntax/",
     "title": "Markdown 基本用法",
     "date": "2022-04-05T20:10:00+08:00",
