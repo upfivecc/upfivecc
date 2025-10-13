@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { config } from '@/lib/config';
 
 export default function HackerMenuPage() {
-  const [binaryText, setBinaryText] = useState('');
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalOutput, setTerminalOutput] = useState<string[]>([]);
   const terminalRef = useRef<HTMLDivElement>(null);
@@ -76,21 +75,6 @@ export default function HackerMenuPage() {
     }
   };
 
-  // 初始化并持续更新二进制文本
-  useEffect(() => {
-    const updateBinaryText = () => {
-      setBinaryText(generateBinaryString(1000));
-    };
-
-    // 立即执行一次
-    updateBinaryText();
-    
-    // 每100毫秒更新一次
-    const interval = setInterval(updateBinaryText, 500);
-    
-    return () => clearInterval(interval);
-  }, []);
-
   // 自动滚动终端输出到底部
   useEffect(() => {
     if (terminalRef.current) {
@@ -109,17 +93,20 @@ export default function HackerMenuPage() {
     <div className="fixed inset-0 bg-black text-green-400 font-mono overflow-hidden crt-effect">
       {/* 背景二进制跑马灯 */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <div 
             key={i} 
-            className="whitespace-nowrap animate-marquee"
+            className="absolute whitespace-nowrap animate-marquee-vertical"
             style={{ 
-              animationDuration: `${20 + Math.random() * 30}s`,
-              animationDelay: `${Math.random() * 5}s`,
-              top: `${i * 2}%`
+              animationDuration: `${10 + Math.random() * 20}s`,
+              animationDelay: `${Math.random() * 2}s`,
+              left: `${i * 5}%`,
+              width: '50px'
             }}
           >
-            {generateBinaryString(200)}
+            {generateBinaryString(50).split('').map((char, idx) => (
+              <div key={idx} className="leading-6">{char}</div>
+            ))}
           </div>
         ))}
       </div>
