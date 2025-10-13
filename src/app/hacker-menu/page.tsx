@@ -16,7 +16,7 @@ export default function HackerMenuPage() {
     { name: '微信小程序', href: '/course' },
     { name: 'APP', href: '/timeline' },
     { name: '点餐系统', href: '/about' },
-    { name: '预约系统', href: '/about' },
+    { name: '预约系统', href: '/about1' },
   ];
 
   // 生成随机二进制字符串
@@ -130,7 +130,7 @@ export default function HackerMenuPage() {
         </div>
 
         {/* 终端模拟器 */}
-        <div className="w-full max-w-2xl mb-8 bg-black/80 border border-green-400 p-4 rounded">
+        {/* <div className="w-full max-w-2xl mb-8 bg-black/80 border border-green-400 p-4 rounded">
           <div className="flex items-center mb-2">
             <div className="flex space-x-2">
               <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -162,7 +162,7 @@ export default function HackerMenuPage() {
             />
             <span className="cursor-blink ml-1">_</span>
           </div>
-        </div>
+        </div> */}
 
         {/* 菜单选项 */}
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-4 w-full max-w-4xl">
