@@ -1,0 +1,131 @@
+/* 黑客风格专用样式 */
+
+/* 水平跑马灯动画 */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 垂直跑马灯动画 */
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical linear infinite;
+}
+
+/* 扫描线效果 */
+.scanline {
+  position: relative;
+}
+
+.scanline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(0, 255, 0, 0.3);
+  animation: scan 5s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* 文字闪烁效果 */
+.text-flicker {
+  animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 终端光标 */
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* CRT屏幕效果 */
+.crt-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 255, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.2) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* 代码高亮效果 */
+.code-snippet {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.code-keyword {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.code-function {
+  color: #ffff00;
+  text-shadow: 0 0 5px #ffff00;
+}
+
+.code-string {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.code-comment {
+  color: #008000;
+  text-shadow: 0 0 5px #008000;
+}

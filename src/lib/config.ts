@@ -54,6 +54,10 @@ export const config = {
       { 
         title: "动态", 
         href: "/timeline",
+      },
+      { 
+        title: "黑客终端", 
+        href: "/hacker-menu",
       }
     ],
   },

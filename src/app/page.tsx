@@ -40,7 +40,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ p
         
         {/* 社交链接 - 仅当有链接时才显示 */}
         {socialLinks.length > 0 && (
-          <div className="flex space-x-2 text-gray-600">
+          <div className="flex flex-wrap gap-2 text-gray-600">
             {socialLinks.map((link, index) => (
               <div key={link.name} className="flex items-center">
                 {index > 0 && <span className="mx-1">·</span>}
@@ -51,6 +51,18 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ p
             ))}
           </div>
         )}
+        
+        {/* 黑客终端提示 */}
+        <div className="mt-4 p-4 bg-black text-green-400 rounded-lg font-mono">
+          <p className="mb-2">&gt; 检测到安全协议...</p>
+          <p className="mb-3">&gt; 系统已就绪，访问特殊区域</p>
+          <Link 
+            href="/hacker-menu" 
+            className="inline-block px-4 py-2 border border-green-400 hover:bg-green-900/20 transition-colors"
+          >
+            &gt; 进入黑客终端 &lt;&lt;
+          </Link>
+        </div>
       </div>
 
       <div className="space-y-4">

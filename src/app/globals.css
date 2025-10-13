@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./hacker-styles.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -119,4 +120,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* 黑客风格跑马灯动画 */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+
+/* 自定义绿色主题 */
+.hacker-green {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
 }
