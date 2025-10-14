@@ -107,12 +107,9 @@ export default function HackerMenuPage() {
     setConfigs(generated);
   }, []);
 
-
-
   return (
     <div className="fixed inset-0 bg-black text-green-400 font-mono overflow-hidden crt-effect">
       {/* 背景二进制跑马灯 */}
-      <div className="fixed inset-0 bg-black text-green-400 font-mono overflow-hidden crt-effect">
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         {configs.map((cfg, i) => (
           <div
@@ -131,7 +128,6 @@ export default function HackerMenuPage() {
           </div>
         ))}
       </div>
-    </div>
 
       {/* 扫描线效果 */}
       <div className="scanline absolute inset-0 pointer-events-none"></div>
