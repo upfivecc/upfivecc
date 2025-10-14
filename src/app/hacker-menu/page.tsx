@@ -1,14 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
-import { config } from '@/lib/config';
+// import { config } from '@/lib/config';
 
-function generateBinaryString(length: number) {
-  return Array.from({ length })
-    .map(() => (Math.random() > 0.5 ? '1' : '0'))
-    .join('');
-}
 
 export default function HackerMenuPage() {
   const [terminalInput, setTerminalInput] = useState('');
@@ -75,11 +70,11 @@ export default function HackerMenuPage() {
   };
 
   // 处理键盘事件
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      handleTerminalCommand(terminalInput);
-    }
-  };
+  // const handleKeyDown = (e: React.KeyboardEvent) => {
+  //   if (e.key === 'Enter') {
+  //     handleTerminalCommand(terminalInput);
+  //   }
+  // };
 
   // 自动滚动终端输出到底部
   useEffect(() => {
@@ -184,7 +179,7 @@ export default function HackerMenuPage() {
 
         {/* 菜单选项 */}
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-4 w-full max-w-4xl">
-          {menuItems.map((item, index) => (
+          {menuItems.map((item) => (
             <Link 
               key={item.href}
               href={item.href}
