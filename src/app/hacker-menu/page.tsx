@@ -11,12 +11,12 @@ export default function HackerMenuPage() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const menuItems = [
-    { name: '电商收银平台搭建', href: '/' },
-    { name: 'AI 平台搭建', href: '/blog' },
-    { name: '微信小程序', href: '/course' },
-    { name: 'APP', href: '/timeline' },
-    { name: '点餐系统', href: '/about' },
-    { name: '预约系统', href: '/about1' },
+    { name: '电商收银系统', href: '/e' },
+    { name: '上门预约系统', href: '/booking' },
+    { name: '点餐系统', href: '/ordering' },
+    { name: '人工智能', href: '/ai' },
+    { name: '小程序', href: '/miniprogram' },
+    { name: 'APP开发', href: '/appdev' },
   ];
 
   // 生成随机二进制字符串
@@ -118,7 +118,7 @@ export default function HackerMenuPage() {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 md:p-8">
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-6xl md:text-8xl font-bold mb-4 text-flicker">
-            {/* {config.site.title} */} 欢迎来到 12 年 + 程序员的直播间
+            {/* {config.site.title} */}  全网承接各种软件开发
           </h1>
           <div className="h-1 w-84 md:w-432 bg-green-400 mx-auto mb-4 md:mb-6"></div>
           <p className="text-base md:text-xl text-green-300 mb-2">
@@ -177,7 +177,7 @@ export default function HackerMenuPage() {
                   {item.name}
                 </span>
                 <span className="text-green-300 group-hover:text-green-200">
-                  &gt;&gt;
+                  {/* &gt;&gt; */}
                 </span>
               </div>
               <div className="mt-2 text-xs md:text-sm text-green-500">

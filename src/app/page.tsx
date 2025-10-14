@@ -60,7 +60,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ p
             href="/hacker-menu" 
             className="inline-block px-4 py-2 border border-green-400 hover:bg-green-900/20 transition-colors"
           >
-            &gt; 进入黑客终端 &lt;&lt;
+            &gt; 进入服务 &lt;&lt;
           </Link>
         </div>
       </div>
