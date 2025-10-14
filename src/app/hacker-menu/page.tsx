@@ -133,7 +133,7 @@ export default function HackerMenuPage() {
           <h1 className="text-6xl md:text-8xl font-bold mb-4 text-flicker">
             {/* {config.site.title} */}  全网承接各种软件开发
           </h1>
-          <div className="h-1 w-84 md:w-432 bg-green-400 mx-auto mb-4 md:mb-6"></div>
+          <div className="h-1 w-84 md:w-239 bg-green-400 mx-auto mb-4 md:mb-6"></div>
           <p className="text-base md:text-xl text-green-300 mb-2">
             {/* 欢迎来到 12 年 + 程序员的直播间 */}
           </p>
