@@ -208,7 +208,7 @@ export default function HackerMenuPage() {
         {/* 系统信息 */}
         <div className="mt-8 text-center text-xs text-green-500">
           <p>系统时间: {new Date().toLocaleString('zh-CN')}</p>
-          <p className="mt-1">状态: 在线 | 用户: guest | 权限: 访客</p>
+          <p className="mt-1">状态: 在线 | 用户: upfive | 权限: 访客</p>
         </div>
       </div>
     </div>
