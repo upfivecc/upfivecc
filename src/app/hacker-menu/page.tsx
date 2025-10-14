@@ -1,8 +1,14 @@
 "use client";
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useMemo, useState, useRef } from 'react';
 import Link from 'next/link';
 import { config } from '@/lib/config';
+
+function generateBinaryString(length: number) {
+  return Array.from({ length })
+    .map(() => (Math.random() > 0.5 ? '1' : '0'))
+    .join('');
+}
 
 export default function HackerMenuPage() {
   const [terminalInput, setTerminalInput] = useState('');
@@ -89,27 +95,43 @@ export default function HackerMenuPage() {
     }
   }, []);
 
+  // 生成固定的随机配置，只生成一次（客户端、SSR 均可稳定）
+  const [configs, setConfigs] = useState<{duration: number, delay: number, left: number, binary: string}[]>([]);
+  useEffect(() => {
+    const generated = Array.from({ length: 20 }).map((_, i) => ({
+      duration: 10 + Math.random() * 20,
+      delay: Math.random() * 2,
+      left: i * 5,
+      binary: generateBinaryString(50),
+    }));
+    setConfigs(generated);
+  }, []);
+
+
+
   return (
     <div className="fixed inset-0 bg-black text-green-400 font-mono overflow-hidden crt-effect">
       {/* 背景二进制跑马灯 */}
+      <div className="fixed inset-0 bg-black text-green-400 font-mono overflow-hidden crt-effect">
       <div className="absolute inset-0 opacity-20 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div 
-            key={i} 
+        {configs.map((cfg, i) => (
+          <div
+            key={i}
             className="absolute whitespace-nowrap animate-marquee-vertical"
-            style={{ 
-              animationDuration: `${10 + Math.random() * 20}s`,
-              animationDelay: `${Math.random() * 2}s`,
-              left: `${i * 5}%`,
-              width: '50px'
+            style={{
+              animationDuration: `${cfg.duration}s`,
+              animationDelay: `${cfg.delay}s`,
+              left: `${cfg.left}%`,
+              width: '50px',
             }}
           >
-            {generateBinaryString(50).split('').map((char, idx) => (
+            {cfg.binary.split('').map((char, idx) => (
               <div key={idx} className="leading-6">{char}</div>
             ))}
           </div>
         ))}
       </div>
+    </div>
 
       {/* 扫描线效果 */}
       <div className="scanline absolute inset-0 pointer-events-none"></div>
