@@ -3,7 +3,7 @@ title: "DeepSeek-OCR 横空出世，让 AI 一眼看懂的黑科技"
 date: 2025-03-15T21:10:00+08:00
 updated: 2025-03-15T21:10:00+08:00
 keywords: ["DeepSeek", "提示词", "DeepSeek-OCR"]
-featured: true
+featured: true 
 summary: " DeepSeek-OCR 横空出世，让 AI 一眼看懂的黑科技"
 ---
 
